@@ -1,95 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head>.
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index2.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 <body>
-   
-    <nav class="navbar">
-        <div class="navbar-icon">
-           <span class="navbar-icon"> <i class="fa-solid fa-circle-plus"></i></span>
-            <span class="site-name"><strong>Medi</strong>lop</span>
-        </div>
-        <ul class="navbar-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>  
-            <li><a href="#">Doctors</a></li>
-            <li><a href="#">Facility</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
-        <div class="navbar-btn">
-            <button class="login-btn">Log in</button>
-            <button class="signup-btn">Sign Up</button>
+    <body>
+        <header>
+          <div class="header">
+            <div><img width="1px" class="logo-image" src="./pixel-pic/cross.jpg"></div>
+            <div class="logo"><span style="font-weight: bold;" >Medi</span>lop
+            </div>
+            <div class="navbar">
+              <nav>
+                <ul class="navbar-links">
+                  <li><a href="#home-container">Home</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#best-doctors">Doctors</a></li>
+                  <li><a href="#steps">Facility</a></li>
+                  <li><a href="#AboutUs-container">About us</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="login">
+              <button type="button" class="button js-button">Log In</button>
+              <button type="button" class="button js-button2">Sign Up</button>
+            </div> 
+          </div>
+        </header>
 
-        </div>
-    </nav>
-    <main>
-        <div class="advert">
-            <div class="left">
-                <div><h4>We Care About <br> Your Health</h4></div>
-               <div><p>
-                    We care about your health. Prioritize your well-being with 
-                    our trusted solutions. Start your journey to better health today-because
-                    you deserve the best care.
-                </p></div>
+
+        <main>
+          <div id="home-container">
+            <div class="text-content">
+              <div class="header-2"><h1>We Care About Your Health</h1></div>
+              <div>
+                <p>We care about your health and well-being, providing the support and resources you need to live a healthier,happier life. Our commitment is to ensure you have access to personalized care, expert guidance, and the latest tools to help you achieve your wellness goals. Your health is our priority, and we are here every step of the way. </p>
+              </div>
+              <div class="sign">
+                <input type="text" class="home-input">
+                <button class="home-signup">Sign Up</button>
+              </div>
+              <div class="home-buttons">
+                <button class="book-now"> Book Now</button>
+                <button id="playButtton" class="image-text-button">
+                  <img width="20px" src="./pixel-pic/play-btn.jpg" alt="Icon" class="button-icon">
+             </button> <span class="button-text">Play Video</span>     
+              </div>
+            </div>
+              <video muted controls>
+                <source src="./videos/WhatsApp Video 2024-08-29 at 00.18.01_3d28d073.mp4">
+            </video>
         
-                    <div id="sign-upc">
-                        <label id="sign"></label>
-                        <input type="text" id="sign"><div id="sign-up">sign-up</div>
+            
+           
+          </div>
+
+
+          <div class="stats-container">
+            <div class="stat-item">
+                <h2>95%</h2>
+                <p></p>Satisfaction rate
+            </div>
+            <div class="stat-item">
+                <h2>1,500+</h2>
+                <p>specialists</p>
+            </div>
+            <div class="stat-item">
+                <h2>3,000+</h2>
+                <p>successful treatments</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>commitment to quality care</p>
+            </div>
+        </div>
+        
+
+
+          <div  id="services">
+            <h1><span style="color: rgb(114, 113, 113);">Our Best</span> Services</h1>
+          </div>
+
+          <div class="services-container">
+            <div class="specialist">
+              <img width="150em" class="iconic" src="./pixel-pic/stenthoscope.jpg">
+              <h3> All Specialist</h3>
+              <p>We offer a wide range of medical exprtise, including <strong>Cardiology, orthopedics, endocrinology, neurology, pediatrics, dermatology, and more.</strong>Each specialist is highly trained and committed to providing personalized care for all your health needs. Explore our team of experts to find the right care for you.</p>
+            </div>
+            <div class="specialist">
+              <img width="150em"  class="iconic" src="./pixel-pic/paddlock1.jpg">
+              <h3>Private & Secure</h3>
+              <p>We prioritize your privacy and security. All personel health information is kept confidential and protected with the highest security standards. Your data is handled securely, ensuring your peace of mind while receiving top-quality care from our specialists.</p>
+            </div>
+            <div class="specialist">
+              <img width="150em"  class="iconic" src="./pixel-pic/globe1.jpg">
+              <h3> Million Customers</h3>
+              <p>With over <strong>a million</strong>satisfied Customers, we are dedicated to providing secure, private, and expert medical care. Our specialists are committed to ensuring your health and safety with the highest standards of confidentiality and security. </p>
+            </div>
+            <div class="specialist">
+              <img width="150em"  class="iconic" src="./pixel-pic/robot1.jpg">
+              <h3> Chatbot Support</h3>
+              <p>Our advanced chatbot system is here to assist you anytime. Whether you need help booking appointment, finding the right specialist, or answering medical-related question , our chatbot provides quick, secure, and reliable support 24/7</p>
+            </div>
+          </div>
+
+
+          <div id="baby-container">
+            <div class="baby">
+              <img class="iconic" src="./pixel-pic/babyhealth2.jpg">
+              <h3>Baby health</h3>
+            </div>
+            <div class="baby">
+              <img class="iconic" src="./pixel-pic/stomach3.jpg">
+              <h3>Stomach</h3>
+            </div>
+            <div class="baby">
+              <img class="iconic" src="./pixel-pic/psychiatry1.jpg">
+              <h3> Psychiatry</h3>
+            </div>
+            <div class="baby">
+              <img class="iconic" src="./pixel-pic/urology2.jpg">
+              <h3>Urology</h3>
+            </div>
+            <div class="baby">
+              <img class="iconic" src="./pixel-pic/dermatorogy1.jpg">
+              <h3>Dermatology</h3>
+            </div>
+            <div class="baby">
+              <img class="iconic" src="./pixel-pic/virus1.jpg">
+              <h3>Infectious Diseases</h3>
+            </div>
+          </div>
+
+
+
+          <div  id="looking-for">
+            <h4>Are you looking for:<h4>
+          </div>
+
+
+
+          <div id="consult-container">
+            <div class="consult">
+              <h3>Doctors </h3>
+              <p>Experienced and dedicated healthcare professional providing comprehensive care for a wide range of medical needs. Our doctors are here to ensure your health and well-being with expert advice and treatment.</p>
+            </div>
+            <div class="consult">
+              <h3>Consult</h3>
+              <p>Book a consultation with our expert doctors to receive personalized medical advice and treatment tailored to your needs.</p>
+            </div>
+            <div class="consult">
+              <h3> pharmacy</h3>
+              <p>Convenient access to prescription and over-the-counter medication. Our pharmacy ensures you receive the right medication and expert advice for your health needs.  </p>
+            </div>
+            <div class="consult">
+              <h3> Diagnostics</h3>
+              <p>comprehensive diagnostics services to accurately identify and monitor health cionditions. Our state of the art technology and skilled professionals ensures precise and timely results.</p>
+            </div>
+          </div>
+
+
+
+
+          <div  id="best-doctors">
+            <h2><span style="color: gray;">Our Best</span> Doctors</h2>
+          </div>
+
+          <div class="doctors-container">
+            <div class="doctor-data">
+              <img class="image-about" src="./pixel-pic/doctor3.jpg">
+              <h3> Dr.Alex.Ph.d.</h3>
+              <p><b>DR.Alex Mwangi Mumata</b>our head oncology chair. He is the best in the whole country with over 1000+ cancer patient treated and cured under his management. He provides valuable insights and high-quality care. </p>
+            </div>
+            <div class="doctor-data">
+              <img class="image-about" src="./pixel-pic/doctor4.jpg">
+              <h3>Dr.Robart,Ph.d.</h3>
+              <p>DR.Robert Musao Ngengi is one of the best doctor acknoledged by WHO for his extensive and dedication on the field of orthopediology. </p>
+            </div>
+            <div class="doctor-data">
+              <img class="image-about" src="./pixel-pic/doctor1.jpg">
+              <h3> DR.Angel,Ph.d.</h3>
+              <p>DR Angel Wanjiru Mugo the head neulorogist studied in india and have practised medicine in USA , is the best in her field. </p>
+            </div>
+            <div class="doctor-data">
+              <img class="image-about" src="./pixel-pic/doctor6.jpg">
+              <h3> Dr.Rusinu,Ph.d.</h3>
+              <p>DR.Moses Rusinu served as a militaly person, in the line of duty got an accident and could not continue with military duty ,found a passion in field of phychiatry. With over 20years of experience serviving as a mental awarness activist, he is our head phychiatry.  </p>
+            </div>
+          </div>
+
+
+          
+          <div  id="steps">
+            <h1>Easy Steps And<span style="color: rgb(114, 113, 113);"> Get Your Solution</span></h1>
+          </div>
+
+          <div class="Facility-container">
+            <div class="check-doctor">
+              <img width="150em" class="iconic" src="./pixel-pic/doconmagnifying2.jpg">
+              <h3>Check Doctors Profile</h3>
+              <p>Get the best services from us</p>
+            </div>
+            <div class="check-doctor">
+              <img width="150em"  class="iconic" src="./pixel-pic/calender2.jpg">
+              <h3>Request Consultation</h3>
+              <p>Get the best services from us</p>
+            </div>
+            <div class="check-doctor">
+              <img width="150em"  class="iconic" src="./pixel-pic/videocall3.jpg">
+              <h3> Receive Your Consultation</h3>
+              <p>Get the best services from us</p>
+            </div>
+            <div class="check-doctor">
+              <img width="150em"  class="iconic" src="./pixel-pic/lightbulb.jpg">
+              <h3> Get Your Solution</h3>
+              <p>Get the best services from us</p>
+            </div>
+          </div>
+
+
+          <div id="Anywhere-container">
+            <div class="text-content">
+              <div class="header-2"> <h2><span style="color: rgb(114, 113, 113);">Best Doctors</span> Anywhere And Anytime</h2></div>
+
+              <div>
+                <p>Our hospital is committed to your health, utilizing cutting-edge technology and expert care. We prioritize patient education and well-being, ensuring a comfortable, compassionate experience. Join our community dedicated to your health.</p>
+              </div>
+              <div class="black-btn">
+                <button class="find-dr"> Find Doctor Now</button>          
+              </div>
+            </div>
+            <div class="home-image">
+              <img  style="width: 600px;height: 450px;" class="home-image" src="./pixel-pic/globestenthescope4.jpg" alt="picture" >
+            </div>
+           
+          </div>
+
+
+
+          <div id="urgentcare-container">
+
+            <div class="home-image">
+              <img  style="width: 600px;height: 450px;" class="home-image" src="./pixel-pic/ambulanceOnTime1.jpg" alt="home" >
+            </div>
+
+            <div class="text-content">
+              <div class="header-2"> <h2><span style="color: rgb(114, 113, 113);">Urgent</span> Online Care <span style="color: rgb(114, 113, 113);">Solution Your Problem</span></h2></div>
+
+              <div>
+                <p>Our hospital  ...</p>
+              </div>
+              <div class="black-btn">
+                <button class="appointment-btn"> Take Appointment</button>          
+              </div>
+            </div>
+          </div>
+
+
+
+          <div  id="AboutUs-container">
+            <h1><span style="color:rgb(173, 173, 173);">What People Say</span> About Us</h1>
+          </div>
+
+          <div class="whatSay-container">
+            <div class="name-say">
+              <img width="150em" class="image-about" src="./pixel-pic/old-man.jpg">
+              <h3> Name</h3>
+              <p>Get </p>
+            </div>
+            <div class="name-say">
+              <img width="150em"  class="image-about" src="./pixel-pic/woman.jpg">
+              <h3>Name</h3>
+              <p>Get t</p>
+            </div>
+            
+          </div>
+          <div class="regiter-easily">
+            <h2 id="letit"><span style="color:rgb(11 4, 113, 113);">Want To</span> Register<span style="color:rgb(11 4, 113, 113);">Easily ?</span></h2>
+              <button class="submit-here">Submit Here</button>
+            </div>
+  
+
+            </main>
+
+
+          </div><footer>
+            <div class="footer-section">
+                <div class="footer-column">
+                 <span> <img style="width: 25px; height: auto;" class="logo-image" src="./pixel-pic/cross.jpg"> Medilop
+                  </span><br><br>
+                    <p>We care about your health and well-being, providing the support and resources you need to live a healthier,happier life. Our commitment is to ensure you have access to personalized care, expert guidance, and the latest tools to help you achieve your wellness goals. Your health is our priority, and we are here every step of the way.</p>
+                    <div class="social-icons">
+                        <a href="https://twitter.com" target="_blank"><img  src="./pixel-pic/twitter.jpg" alt="Twitter"></a>
+                        <a href="https://www.linkedin.com" target="_blank"><img src="./pixel-pic/linkedin.jpg" alt="LinkedIn"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="./pixel-pic/instagram.jpg" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/mengo mengohh" target="_blank"><img src="./pixel-pic/facebook.jpg" alt="Facebook"></a>
                     </div>
-            </div>
-        <div class="image-container">
-                <img class="pic1" src="" alt="picture"> 
-            </div>
-        </div>
-        </div>
-
-
-        <h1>title</h1>
-        <div class="container">
-            <div class="row">
-                <div class="content">
-                    <img src="icon1.png" alt="Icon 1" class="icon">
-                    <h3>Row 1 Title</h3>
-                    <p>Row 1 description text goes here.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="./privacy/home.txt">Delivery Services</a></li>
+                        <li><a href="./acount.html">Contact Us</a></li>
+                        <li><a href="./privacy/home.txt">Terms of Sale</a></li>
+                        <li><a href="">Privacy and Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Feature</h3>
+                    <ul>
+                        <li><a href="#home-container">Home</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#best-doctors">Doctors</a></li>
+                        <li><a href="#steps">Facility</a></li>
+                        <li><a href="#AboutUs-container">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>User</h3>
+                    <ul>
+                        <li><a href="./Udesign.html" target="_blank">User Design</a></li>
+                        <li><a href="./register.html" target="_blank">User Register</a></li>
+                        <li><a href="./Udesign.html" target="_blank">Forgot Password</a></li>
+                        <li><a href="./register.html" target="_blank">Account Setting</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="content">
-                    <img src="icon2.png" alt="Icon 2" class="icon">
-                    <h3>Row 2 Title</h3>
-                    <p>Row 2 description text goes here.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="content">
-                    <img src="icon3.png" alt="Icon 3" class="icon">
-                    <h3>Row 3 Title</h3>
-                    <p>Row 3 description text goes here.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="content">
-                    <img src="icon4.png" alt="Icon 4" class="icon">
-                    <h3>Row 4 Title</h3>
-                    <p>Row 4 description text goes here.</p>
-                </div>
-            </div>
+        </footer>
+        <div>
+          <span><p>&copy; designed by <strong>Elijah M.Wairimu </strong> all right reserved.</p></span>
         </div>
 
 
 
 
 
-    </main>
 
-<scrip src="index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+          <script src="./index.js"></script>
 </body>
 </html>
