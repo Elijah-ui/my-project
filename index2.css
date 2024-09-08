@@ -1,0 +1,719 @@
+/* General styles for body and header */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.logo-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar styles */
+.navbar {
+    flex-grow: 1;
+}
+
+.navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navbar-links li {
+    margin: 0 10px;
+}
+.navbar-links li:hover{
+  background-color: #fff8db;
+  font-size: 110%;
+  justify-content: center;
+  padding: 1;
+  transition: 1.5ms;
+  border-radius: 25%;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Login button styles */
+.login {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+.button:active{
+  background-color:  #a9c6e4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        margin: 5px 0;
+    }
+
+    .login {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+#home-container {
+    display: flex;
+    flex-wrap: wrap; /* Makes the layout responsive */
+    width: 100%;
+  }
+  
+  .text-content {
+    flex: 1; /* Takes 50% of the width */
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in the width calculation */
+  }
+  .book-now{
+    background-color: black;
+    color: white;
+    margin-top: 33%;
+  }
+  .home-signup{
+    background-color: black;
+    color: white;
+  }
+  
+  .home-image {
+    flex: 1; /* Takes 50% of the width */
+    width: 100%; /* Ensures the image takes full width of its container */
+    height: auto; /* Keeps the aspect ratio of the image */
+  }
+  
+  /* For smaller devices, adjust the layout to be more suitable */
+  @media (max-width: 768px) {
+    #home-container {
+      flex-direction: column; /* Stacks items vertically on smaller screens */
+    }
+  
+    .text-content,
+    .home-image {
+      flex: none;
+      width: 100%; /* Each section takes full width */
+    }
+  }
+
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3% 17%; /* 17% margin on the right and left side */
+    background-color: #1a1919; /* Black background */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Optional: adds some padding to the top and bottom */
+}
+
+.stat-item {
+    flex: 1 1 calc(25% - 20px); /* Flex item takes up to 25% of the container minus some margin */
+    border-left: 2px solid #302c2c; /* Solid white border */
+    margin: 10px; /* Margin between items */
+    padding: 20px; /* Padding inside each stat-item */
+    text-align: center; /* Center align the text */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-container {
+        margin: 0 10%; /* Adjust margin for smaller screens */
+    }
+
+    .stat-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        margin: 0 5%; /* Further adjust margin for very small screens */
+    }
+
+    .stat-item {
+        flex: 1 1 100%; /* One item per row on very small screens */
+    }
+}
+
+/* Container styling */
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    justify-content: space-around; /* Adds space between the items */
+    background-color: #f5f5f5; /* Light grey background for the container */
+    padding: 20px;
+    gap: 20px; /* Adds space between each specialist div */
+}
+
+/* Individual service box styling */
+.specialist {
+    flex: 1 1 250px; /* Flexible basis with a minimum width of 250px */
+    max-width: 250px; /* Max width to control the size of each box */
+    text-align: center; /* Centers text within the div */
+    background-color: #f0f0f0; /* Light grey background for each box */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+}
+
+/* Image styling */
+.specialist img {
+    border-radius: 50%; /* Circular border around the image */
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    margin-bottom: 10px; /* Space between the image and the heading */
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+    .services-container {
+        flex-direction: column; /* Stacks items on top of each other on small screens */
+        align-items: center; /* Centers the items in the column layout */
+        gap: 20px; /* Ensures the gap remains consistent on small screens */
+    }
+    
+    .specialist {
+        max-width: 90%; /* Allows for larger elements on smaller screens */
+    }
+}
+
+/* Base styles for large screens */
+#baby-container {
+    display: flex;
+    flex-direction: row;
+    margin: 3% 0%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px; /* Small gap between divs */
+  }
+  
+  .baby {
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 8px; /* Rounded corners for the div */
+    flex: 1 1 150px; /* Grow and shrink, minimum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 10px; /* Padding inside the div */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .iconic {
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    border-radius: 50%; /* Round the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 10px; /* Space between image and heading */
+  }
+  
+  .baby h3 {
+    font-size: 16px; /* Font size for the heading */
+    text-align: center; /* Center text */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Responsive styles for medium screens */
+  @media (max-width: 768px) {
+    #baby-container {
+      gap: 10px; /* Adjust gap for smaller screens */
+    }
+    
+    .iconic {
+      width: 80px; /* Adjust image size */
+      height: 80px; /* Adjust image size */
+    }
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 480px) {
+    .baby {
+      flex: 1 1 100px; /* Adjust minimum width for very small screens */
+    }
+  
+    .iconic {
+      width: 60px; /* Further adjust image size */
+      height: 60px; /* Further adjust image size */
+    }
+  }
+
+/* Base styles for large screens */
+#consult-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin:0%;
+  }
+  
+  .consult {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .consult h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .consult p {
+    margin: 0;
+  }
+  
+  /* Responsive styles for medium screens */
+  @media (max-width: 768px) {
+    #consult-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Increase space between items on smaller screens */
+    }
+    
+    .consult {
+      max-width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 480px) {
+    .consult {
+      padding: 15px; /* Adjust padding for very small screens */
+    }
+  }
+
+/* Base styles for large screens */
+#consult-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin:3% 0%;
+  }
+  
+  .consult {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .consult h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .consult p {
+    margin: 0;
+  }
+  
+  /* Responsive styles for medium screens */
+  @media (max-width: 768px) {
+    #consult-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Increase space between items on smaller screens */
+    }
+    
+    .consult {
+      max-width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 480px) {
+    .consult {
+      padding: 15px; /* Adjust padding for very small screens */
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+/* Styles for the content wrapper */
+.content-wrapper {
+    max-width: 1200px; /* Maximum width for the main content area */
+    margin: 0 auto; /* Centers the content */
+    padding-left: 20px; /* Padding on the left side */
+    padding-right: 20px; /* Padding on the right side */
+}
+
+
+/* Base styles for large screens */
+.doctors-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px; /* Small gap between divs */
+    margin: 3% 0%;
+  }
+  
+  .doctor-data {
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 8px; /* Rounded corners for the div */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items vertically */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    flex: 1 1 200px; /* Grow and shrink with a minimum width */
+    max-width: 300px; /* Maximum width for each div */
+    padding: 0.5%;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .image-about {
+    width: 100px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    border-radius: 8px; /* Slightly rounded corners for the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    position: relative;
+    left: 20px;
+    margin-right: 70%;
+    padding: 0;
+  }
+  
+  .doctor-data h3 {
+    font-size: 18px; /* Font size for the heading */
+    padding: 0;
+  }
+  
+  .doctor-data p {
+    font-size: 14px; /* Font size for the paragraph */
+    padding: 0;
+  }
+  
+  /* Responsive styles for medium screens */
+  @media (max-width: 768px) {
+    .doctors-container {
+      gap: 10px; /* Adjust gap for smaller screens */
+    }
+    
+    .image-about {
+      width: 60px; /* Adjust image size */
+      height: 60px; /* Adjust image size */
+    }
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 480px) {
+    .doctor-data {
+      flex-direction: column; /* Stack image and text vertically on very small screens */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text */
+    }
+  
+    .image-about {
+      width: 50px; /* Further adjust image size */
+      height: 50px; /* Further adjust image size */
+      margin-right: 0; /* Remove margin on small screens */
+      margin-bottom: 10px; /* Space between image and text */
+    }
+  
+    .doctor-data h3 {
+      font-size: 16px; /* Adjust heading font size */
+    }
+  
+    .doctor-data p {
+      font-size: 12px; /* Adjust paragraph font size */
+    }
+  }
+
+  /* Container styles */
+.Facility-container {
+    display: flex;
+    justify-content: space-between; /* Space between each item */
+    gap: 1rem; /* Gap between each div */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+    padding: 1rem;
+    margin: 0%;
+  }
+  
+  /* Each item (check-doctor) styles */
+  .check-doctor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px; /* Rounded corners for each div */
+    text-align: center; /* Center-align the text */
+    width: calc(25% - 1rem); /* Four items per row with gap */
+    box-sizing: border-box;
+  }
+  
+  .check-doctor img {
+    border-radius: 50%; /* Circular border for images */
+    background-color: #c2bdbd; /* Image background color */
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .check-doctor {
+      width: calc(50% - 1rem); /* Two items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .check-doctor {
+      width: 100%; /* One item per row */
+    }
+  }
+
+  /* Container styles */
+#Anywhere-container {
+    display: flex;
+    justify-content: space-between; /* Space between the main divs */
+    align-items: center; /* Vertically center the content */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 1rem;
+    margin: 3% 0%;
+  }
+  
+  /* Text content styles */
+  .text-content {
+    flex: 1; /* Take up half the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between each item */
+    align-items: flex-start; /* Align items to the start */
+    box-sizing: border-box;
+    padding-right: 1rem; /* Space between text and image */
+  }
+  
+  /* Header and paragraph alignment */
+  .header-2, .text-content p, .black-btn {
+    width: 100%; /* Make sure all elements start at the same line */
+  }
+  
+  /* Button styling */
+  .black-btn {
+    margin-top: 1rem; /* Space above the button */
+  }
+  
+  /* Image container styles */
+  .home-image {
+    flex: 1; /* Take up half the container */
+    text-align: center; /* Center the image horizontally */
+    box-sizing: border-box;
+    padding-left: 1rem; /* Space between text and image */
+  }
+  
+  .home-image img {
+    max-width: 100%; /* Make sure image scales responsively */
+    height: auto; /* Keep aspect ratio */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    #Anywhere-container {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      text-align: center; /* Center-align text on small screens */
+    }
+  
+    .text-content, .home-image {
+      width: 100%; /* Full width for each element */
+      padding: 0; /* Remove padding */
+    }
+  }
+
+  /* Container styles */
+#urgentcare-container {
+    display: flex;
+    justify-content: space-between; /* Space between the main divs */
+    align-items: center; /* Vertically center the content */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 1rem;
+    margin: 0%;
+  }
+  
+  /* Image container styles */
+  .home-image {
+    flex: 1; /* Take up half the container */
+    text-align: center; /* Center the image horizontally */
+    box-sizing: border-box;
+    padding-right: 1rem; /* Space between image and text */
+  }
+  
+  .home-image img {
+    max-width: 100%; /* Ensure image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Text content styles */
+  .text-content {
+    flex: 1; /* Take up half the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between each item */
+    align-items: flex-start; /* Align items to the start */
+    box-sizing: border-box;
+    padding-left: 1rem; /* Space between text and image */
+  }
+  
+  /* Header and paragraph alignment */
+  .header-2, .text-content p, .black-btn {
+    width: 100%; /* Make sure all elements start at the same line */
+  }
+  
+  /* Button styling */
+  .black-btn {
+    margin-top: 1rem; /* Space above the button */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    #urgentcare-container {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      text-align: center; /* Center-align text on small screens */
+    }
+  
+    .text-content, .home-image {
+      width: 100%; /* Full width for each element */
+      padding: 0; /* Remove padding */
+    }
+  }
+
+
+
+  /* Container styles */
+.whatSay-container {
+    display: flex;
+    justify-content: space-between; /* Space between the child divs */
+    gap: 1rem; /* Gap between each child div */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 1rem;
+    margin: 3% 0%;
+  }
+  
+  /* Child div styles */
+  .name-say {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align items to the start to form a straight line */
+    width: calc(50% - 1rem); /* Each child takes up 50% of the container's width minus gap */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 1rem;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 1px solid #ddd; /* Light border around each div */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: left; /* Align text to the left */
+  }
+  
+  
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .name-say {
+      width: 100%; /* Full width for each div on smaller screens */
+      margin-bottom: 1rem; /* Space below each div */
+    }
+  }
+
+
+
+
+
+
+
+
+ /* CSS file */
+
+.regiter-easily {
+    display: flex;
+    align-items: center;       /* Center vertically */
+    justify-content: center;   /* Center horizontally */
+    background-color: lightgrey;
+    padding: 20px;
+    gap: 20%;                /* Adds a small gap between the text and button */
+    margin: 0 auto;            /* Centers the entire container */
+    max-width: 100%;          /* Limits width for larger screens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .regiter-easily {
+        flex-direction: column;  /* Stacks elements vertically on small screens */
+        text-align: center;
+    }
+}
