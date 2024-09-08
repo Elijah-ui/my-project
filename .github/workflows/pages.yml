@@ -1,0 +1,15 @@
+name: Deploy Github Pages 
+on:
+   push:
+        branches:
+        - master
+        jobs:
+        deploy:
+        runs-on: obutu-latest
+        steps: 
+        - uses: actions/checkout@v2
+        - name: Deploy
+        run: |
+        mkdir  public 
+        echo
+        "<html><body><h1><Hello, Github Pages!</h1></body></html>" > public/index.html
