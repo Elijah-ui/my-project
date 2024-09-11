@@ -1,8 +1,13 @@
 /* General styles for body and header */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    margin: 0 auto;
     padding: 0;
+    min-height: 100vh;
+    background: url('./pixel-pic/doctor-standing.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -10,7 +15,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #f8f8f8;
+    background-color:none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,12 +51,13 @@ body {
     margin: 0 10px;
 }
 .navbar-links li:hover{
-  background-color: #fff8db;
-  font-size: 110%;
+ background-color:greenyellow;
+  font-size: 120%;
   justify-content: center;
   padding: 1;
   transition: 1.5ms;
-  border-radius: 25%;
+  border: none;
+  border-radius: 50%;
 }
 
 .navbar-links a {
@@ -196,9 +202,11 @@ body {
 /* Container styling */
 .services-container {
     display: flex;
+    position: relative;
+    z-index: 1;
     flex-wrap: wrap; /* Ensures wrapping on smaller screens */
     justify-content: space-around; /* Adds space between the items */
-    background-color: #f5f5f5; /* Light grey background for the container */
+    background-color:none; /* Light grey background for the container */
     padding: 20px;
     gap: 20px; /* Adds space between each specialist div */
 }
@@ -716,4 +724,8 @@ body {
         flex-direction: column;  /* Stacks elements vertically on small screens */
         text-align: center;
     }
+}
+p{
+  line-height: 1.8;
+  font-family:  sans-serif;
 }
