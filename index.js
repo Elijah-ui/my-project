@@ -1,17 +1,85 @@
-// index.js
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Handle login and signup button clicks
-    const loginButton = document.querySelector('.js-button');
-    const signupButton = document.querySelector('.js-button2');
-    
-    loginButton.addEventListener('click', function() {
-        alert('Log In button clicked');
+// When the login button is clicked
+document.getElementById('js-button.button').addEventListener('click', async () => {
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'login' })  // Send only the action or status
     });
-
-    signupButton.addEventListener('click', function() {
-        alert('Sign Up button clicked');
+  
+    const result = await response.json();
+    alert(result.message);  // Show response from the server
+  });
+  
+  // When the sign up button is clicked
+  document.getElementById('js-button2.button').addEventListener('click', async () => {
+    const response = await fetch('/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'signup' })
     });
+  
+    const result = await response.json();
+    alert(result.message);  // Show response from the server
+  });
+  
+  // When the book appointment button is clicked
+  document.getElementById('book-button').addEventListener('click', async () => {
+    const response = await fetch('/bookAppointment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'bookAppointment' })
+    });
+  
+    const result = await response.json();
+    alert(result.message);  // Show response from the server
+  });
+   // When the find doctor button is clicked
+   document.getElementById('find-dr-btn').addEventListener('click', async () => {
+    const response = await fetch('/bookAppointment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'bookAppointment' })
+    });
+  
+    const result = await response.json();
+    alert(result.message);  // Show response from the server
+  });
+
+  // When the register button is clicked
+document.getElementById('submitBtn').addEventListener('click', async () => {
+    const response = await fetch('/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'register' })
+    });
+  
+    const result = await response.json();
+    alert(result.message);  // Show response from the server
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Smooth scrolling to sections when navbar links are clicked
     const navLinks = document.querySelectorAll('.navbar-links a');
@@ -43,35 +111,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // Handle Sign Up form submission
-    const homeSignupButton = document.querySelector('.home-signup');
-    const homeInput = document.querySelector('.home-input');
     
-    if (homeSignupButton && homeInput) {
-        homeSignupButton.addEventListener('click', function() {
-            const inputValue = homeInput.value;
-            if (inputValue) {
-                alert(You entered: ${inputValue});
-            } else {
-                alert('Please enter a value.');
-            }
-        });
-    }
-
-    // Example of showing an alert for Find Doctor button
-    const findDoctorButton = document.querySelector('.find-dr');
-    if (findDoctorButton) {
-        findDoctorButton.addEventListener('click', function() {
-            alert('Find Doctor Now button clicked');
-        });
-    }
-
-    // Example of showing an alert for Submit Here button
-    const submitHereButton = document.querySelector('.submit-here');
-    if (submitHereButton) {
-        submitHereButton.addEventListener('click', function() {
-            alert('Submit Here button clicked');
-        });
-    }
-});
