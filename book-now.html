@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking doctor summit view...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            appearance: none;
+        }
+
+        .doctor-list {
+            margin-bottom: 20px;
+        }
+
+        .doctor {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .doctor.available {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .doctor.unavailable {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .doctor-info {
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .input-group select {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Book Doctor Now</h2>
+
+            <!-- Doctor Selection List -->
+            <div class="doctor-list">
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. John Doe</strong> - Cardiology
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Jane Smith</strong> - Dermatology
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Emily Clark</strong> - Pediatrics
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Michael Davis</strong> - Neurology
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Alice Thompson</strong> - Orthopedics
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Robert Wilson</strong> - General Medicine
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Laura Brown</strong> - Endocrinology
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Thomas Moore</strong> - Psychiatry
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Karen Lee</strong> - Rheumatology
+                    </div>
+                    <span>Available</span>
+                </div>
+                <div class="doctor available">
+                    <div class="doctor-info">
+                        <strong>Dr. Mark Miller</strong> - Oncology
+                    </div>
+                    <span>Available</span>
+                </div>
+
+                <div class="doctor unavailable">
+                    <div class="doctor-info">
+                        <strong>Dr. Sarah Connor</strong> - Neurology
+                    </div>
+                    <span>Unavailable</span>
+                </div>
+                <div class="doctor unavailable">
+                    <div class="doctor-info">
+                        <strong>Dr. David Garcia</strong> - Cardiology
+                    </div>
+                    <span>Unavailable</span>
+                </div>
+                <div class="doctor unavailable">
+                    <div class="doctor-info">
+                        <strong>Dr. Anna Martinez</strong> - Dermatology
+                    </div>
+                    <span>Unavailable</span>
+                </div>
+                <div class="doctor unavailable">
+                    <div class="doctor-info">
+                        <strong>Dr. James King</strong> - Urology
+                    </div>
+                    <span>Unavailable</span>
+                </div>
+                <div class="doctor unavailable">
+                    <div class="doctor-info">
+                        <strong>Dr. Elizabeth Lopez</strong> - Gastroenterology
+                    </div>
+                    <span>Unavailable</span>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="doctor">Choose a Doctor</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="" disabled selected>Select a doctor</option>
+                        <option value="dr_john_doe">Dr. John Doe - Cardiology (Available)</option>
+                        <option value="dr_jane_smith">Dr. Jane Smith - Dermatology (Available)</option>
+                        <option value="dr_emily_clark">Dr. Emily Clark - Pediatrics (Available)</option>
+                        <option value="dr_michael_davis">Dr. Michael Davis - Neurology (Available)</option>
+                        <option value="dr_alice_thompson">Dr. Alice Thompson - Orthopedics (Available)</option>
+                        <option value="dr_robert_wilson">Dr. Robert Wilson - General Medicine (Available)</option>
+                        <option value="dr_laura_brown">Dr. Laura Brown - Endocrinology (Available)</option>
+                        <option value="dr_thomas_moore">Dr. Thomas Moore - Psychiatry (Available)</option>
+                        <option value="dr_karen_lee">Dr. Karen Lee - Rheumatology (Available)</option>
+                        <option value="dr_mark_miller">Dr. Mark Miller - Oncology (Available)</option>
+                        <option value="dr_sarah_connor" disabled>Dr. Sarah Connor - Neurology (Unavailable)</option>
+                        <option value="dr_david_garcia" disabled>Dr. David Garcia - Cardiology (Unavailable)</option>
+                        <option value="dr_anna_martinez" disabled>Dr. Anna Martinez - Dermatology (Unavailable)</option>
+                        <option value="dr_james_king" disabled>Dr. James King - Urology (Unavailable)</option>
+                        <option value="dr_elizabeth_lopez" disabled>Dr. Elizabeth Lopez - Gastroenterology (Unavailable)</option>
+                    </select>
+                </div>
+                <button type="submit">Book Appointment</button>
+                <br> <br>
+                <a href="./index.html" target="_parent">BACK</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
