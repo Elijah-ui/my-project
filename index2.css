@@ -37,16 +37,8 @@ p{
   font-family:  sans-serif;
   color: #000000;
   font-size:large;
-  opacity: 0.5;
   font-weight: 20px;
 }
-p:hover{
-  opacity: 1;
-  font-weight: 40px;
-  
-
-}
-
 .header {
     display: flex;
     align-items: center;
@@ -92,7 +84,7 @@ p:hover{
     margin: 0 10px;
 }
 .navbar-links li:hover{
- background-color:greenyellow;
+ color:rgb(219, 52, 52);
   font-size: 120%;
   justify-content: center;
   padding: 1;
@@ -115,9 +107,9 @@ p:hover{
 
 .button {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #eef6ff;
     border: none;
-    color: white;
+    color: rgb(20, 19, 19);
     cursor: pointer;
     border-radius: 4px;
 }
@@ -127,6 +119,10 @@ p:hover{
 }
 .button:active{
   background-color:  #a9c6e4;
+}
+#js-button2{
+  background-color: black;
+  color: white;
 }
 
 /* Responsive adjustments */
@@ -424,6 +420,9 @@ p:hover{
     font-weight: bold;
     margin-bottom: 10px;
   }
+  .consult:hover{
+    background-color: #326da8;
+  }
   
   .consult p {
     margin: 0;
@@ -541,6 +540,10 @@ p:hover{
     margin-right: auto;
     font-family: Arial, Helvetica, sans-serif;
   }
+  .doctor-data:hover{
+    background-color: #326da8;
+    border-radius:10px;
+  }
   
   .image-about {
     width: 100px; /* Fixed width for the image */
@@ -619,6 +622,10 @@ p:hover{
     text-align: center; /* Center-align the text */
     width: calc(25% - 1rem); /* Four items per row with gap */
     box-sizing: border-box;
+  }
+  .check-doctor:hover{
+    border-radius: 15px;
+    background-color: #326da8;
   }
   
   .check-doctor img {
@@ -779,6 +786,10 @@ p:hover{
     border: 1px solid #ddd; /* Light border around each div */
     border-radius: 5px; /* Slightly rounded corners */
     text-align: left; /* Align text to the left */
+  }
+  .name-say:hover{
+    background-color: #326da8;
+    border-radius: 10px;
   }
   
   
